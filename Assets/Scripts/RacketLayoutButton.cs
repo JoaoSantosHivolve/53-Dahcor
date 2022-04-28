@@ -79,17 +79,15 @@ public class RacketLayoutButton : MonoBehaviour
         Open = true;
         Interactable = false;
     }
-
     public void CloseLayout()
     {
         Open = false;
         Interactable = Available;
     }
+    
+    public void SetCompleted() => Completed = true;
+    public void SetUncomplete() => Completed = false;
 
-    public void SetCompleted()
-    {
-        Completed = true;
-    }
     public void SetInteractable(bool state) => Interactable = state;
     public void SetAvailable(bool state) => Available = state;
 }

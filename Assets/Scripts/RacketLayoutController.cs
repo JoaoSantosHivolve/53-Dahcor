@@ -6,7 +6,7 @@ public class RacketLayoutController : MonoBehaviour
 {
     private RacketLayoutButton[] _Buttons;
 
-    private void Awake()
+    private void Start()
     {
         _Buttons = transform.GetComponentsInChildren<RacketLayoutButton>();
 
@@ -22,8 +22,6 @@ public class RacketLayoutController : MonoBehaviour
             _Buttons[i].SetInteractable(i == 0 || i == 1);
             _Buttons[i].SetAvailable(i == 0 || i == 1);
         }
-
-        _Buttons[0].SetCompleted();
     }
 
     public void OpenButton(int index)
